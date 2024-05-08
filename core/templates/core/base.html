@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Djelm</title>
+    {% block head %}{% endblock %}
+    <style>
+      html {
+          font-family: Inter var, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+      body {
+        @media (min-width: 1024px) {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+      label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .form-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 2rem;
+        column-gap: 1.5rem;
+      }
+      h2 {
+        margin: 0px;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+      }
+      p {
+        margin: 0px;
+        color: #374151;
+      }
+      .course-title {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          font-size: 0.8rem;
+        }
+      }
+      .course-duration {
+        display: flex;
+        gap: 0.5rem;
+        margin-left: 2rem;
+        width: 100px;
+      }
+      .course-rating {
+        display: flex;
+        align-items: center;
+        gap: 0.1rem;
+        margin-left: 2rem;
+        width: 100px;
+      }
+      .option-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.7rem;
+        background: white;
+      }
+      .right-content {
+        margin-left: auto;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>
