@@ -1,5 +1,5 @@
 from django import forms
-from core.models import Course
+from core.models import Course, Extra
 
 
 class PromotionForm(forms.ModelForm):
@@ -9,6 +9,11 @@ class PromotionForm(forms.ModelForm):
         empty_label=None,
     )
 
+    extras = forms.ModelMultipleChoiceField(
+        queryset=Extra.objects.all(),
+        template_name="elm_programs/modelMultipleChoiceFieldWidget.html",
+    )
+
     class Meta:
         model = Course
-        fields = ["courses"]
+        fields = ["courses", "extras"]
